@@ -16,5 +16,54 @@ namespace Projem
         {
             InitializeComponent();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Araçekle arcekle = new Araçekle();
+            arcekle.Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Sözleşme szlşm = new Sözleşme();
+            szlşm.Show();
+            this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Araçlistele arclstl = new Araçlistele();
+            arclstl.Show();
+            this.Hide();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Müştrilistele mştls = new Müştrilistele();
+            mştls.Show();
+            this.Hide();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Müşteriekle mştrekle = new Müşteriekle();
+            mştrekle.Show();
+            this.Hide();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Anasayfacs anasyf = new Anasayfacs();
+            anasyf.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Satışlar satışlar = new Satışlar();
+            satışlar.Show();
+            this.Hide();
+        }
     }
 }
