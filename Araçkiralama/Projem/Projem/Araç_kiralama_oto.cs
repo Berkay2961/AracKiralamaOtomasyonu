@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projem
 {
@@ -27,6 +28,7 @@ namespace Projem
             tablo = new DataTable();  
             adtr = new SqlDataAdapter(sorgu,baglanti);
             adtr.Fill(tablo);
+            
             baglanti.Close();
             return tablo;
             

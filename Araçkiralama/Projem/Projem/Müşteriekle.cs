@@ -100,5 +100,7 @@ namespace Projem
             satışlar.Show();
             this.Hide();
         }
+
+
     }
 }

@@ -45,14 +45,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.AdSoyad = new System.Windows.Forms.TextBox();
+            this.TC = new System.Windows.Forms.TextBox();
+            this.Telefon = new System.Windows.Forms.TextBox();
+            this.Adres = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.güncelle = new System.Windows.Forms.Button();
+            this.iptal = new System.Windows.Forms.Button();
+            this.sil = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -245,6 +245,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(512, 362);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // label1
             // 
@@ -301,70 +302,73 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "E-mail";
             // 
-            // textBox1
+            // AdSoyad
             // 
-            this.textBox1.Location = new System.Drawing.Point(330, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 22);
-            this.textBox1.TabIndex = 12;
+            this.AdSoyad.Location = new System.Drawing.Point(330, 108);
+            this.AdSoyad.Name = "AdSoyad";
+            this.AdSoyad.Size = new System.Drawing.Size(117, 22);
+            this.AdSoyad.TabIndex = 12;
             // 
-            // textBox2
+            // TC
             // 
-            this.textBox2.Location = new System.Drawing.Point(330, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 22);
-            this.textBox2.TabIndex = 13;
+            this.TC.Location = new System.Drawing.Point(330, 152);
+            this.TC.Name = "TC";
+            this.TC.Size = new System.Drawing.Size(117, 22);
+            this.TC.TabIndex = 13;
             // 
-            // textBox3
+            // Telefon
             // 
-            this.textBox3.Location = new System.Drawing.Point(330, 196);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 22);
-            this.textBox3.TabIndex = 14;
+            this.Telefon.Location = new System.Drawing.Point(330, 196);
+            this.Telefon.Name = "Telefon";
+            this.Telefon.Size = new System.Drawing.Size(117, 22);
+            this.Telefon.TabIndex = 14;
             // 
-            // textBox4
+            // Adres
             // 
-            this.textBox4.Location = new System.Drawing.Point(330, 239);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 22);
-            this.textBox4.TabIndex = 15;
+            this.Adres.Location = new System.Drawing.Point(330, 239);
+            this.Adres.Name = "Adres";
+            this.Adres.Size = new System.Drawing.Size(117, 22);
+            this.Adres.TabIndex = 15;
             // 
-            // textBox5
+            // Email
             // 
-            this.textBox5.Location = new System.Drawing.Point(330, 290);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 22);
-            this.textBox5.TabIndex = 16;
+            this.Email.Location = new System.Drawing.Point(330, 290);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(117, 22);
+            this.Email.TabIndex = 16;
             // 
-            // button8
+            // güncelle
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.Location = new System.Drawing.Point(233, 332);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(92, 45);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "Güncelle";
-            this.button8.UseVisualStyleBackColor = true;
+            this.güncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.güncelle.Location = new System.Drawing.Point(233, 332);
+            this.güncelle.Name = "güncelle";
+            this.güncelle.Size = new System.Drawing.Size(92, 45);
+            this.güncelle.TabIndex = 17;
+            this.güncelle.Text = "Güncelle";
+            this.güncelle.UseVisualStyleBackColor = true;
+            this.güncelle.Click += new System.EventHandler(this.güncelle_Click);
             // 
-            // button9
+            // iptal
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button9.Location = new System.Drawing.Point(357, 332);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(90, 45);
-            this.button9.TabIndex = 18;
-            this.button9.Text = "İptal";
-            this.button9.UseVisualStyleBackColor = true;
+            this.iptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.iptal.Location = new System.Drawing.Point(357, 332);
+            this.iptal.Name = "iptal";
+            this.iptal.Size = new System.Drawing.Size(90, 45);
+            this.iptal.TabIndex = 18;
+            this.iptal.Text = "İptal";
+            this.iptal.UseVisualStyleBackColor = true;
+            this.iptal.Click += new System.EventHandler(this.iptal_Click);
             // 
-            // button10
+            // sil
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button10.Location = new System.Drawing.Point(985, 101);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(86, 42);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "Sil";
-            this.button10.UseVisualStyleBackColor = true;
+            this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sil.Location = new System.Drawing.Point(985, 101);
+            this.sil.Name = "sil";
+            this.sil.Size = new System.Drawing.Size(86, 42);
+            this.sil.TabIndex = 19;
+            this.sil.Text = "Sil";
+            this.sil.UseVisualStyleBackColor = true;
+            this.sil.Click += new System.EventHandler(this.sil_Click);
             // 
             // label6
             // 
@@ -383,6 +387,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(139, 22);
             this.textBox6.TabIndex = 21;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // Müştrilistele
             // 
@@ -391,14 +396,14 @@
             this.ClientSize = new System.Drawing.Size(1083, 608);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sil);
+            this.Controls.Add(this.iptal);
+            this.Controls.Add(this.güncelle);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Adres);
+            this.Controls.Add(this.Telefon);
+            this.Controls.Add(this.TC);
+            this.Controls.Add(this.AdSoyad);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -437,14 +442,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox AdSoyad;
+        private System.Windows.Forms.TextBox TC;
+        private System.Windows.Forms.TextBox Telefon;
+        private System.Windows.Forms.TextBox Adres;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.Button güncelle;
+        private System.Windows.Forms.Button iptal;
+        private System.Windows.Forms.Button sil;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
     }

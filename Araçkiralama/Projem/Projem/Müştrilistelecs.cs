@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -27,9 +28,80 @@ namespace Projem
         {
             string cümle = "select * from müşteri";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
+           //kolon başlıklarını değiştirir
             dataGridView1.DataSource = arackiralama.listele(adtr2, cümle);
+            dataGridView1.Columns[1].HeaderText = "TC";
+            dataGridView1.Columns[0].HeaderText = "AD SOYAD";
+            dataGridView1.Columns[2].HeaderText = "TELEFON";
+            dataGridView1.Columns[3].HeaderText = "ADRES";
+            dataGridView1.Columns[4].HeaderText = "E-MAİL";
+        }
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QT2PTBG\\SQLEXPRESS;Initial Catalog=Araç_kiralama_oto;Integrated Security=True");
+
+            string cümle = $"select * from müşteri where tc like '{textBox6.Text}%'";
+            SqlDataAdapter adtr2 = new SqlDataAdapter(cümle,baglanti);
+            DataTable tablo= new DataTable();
+
+            adtr2.Fill(tablo);
+            dataGridView1.DataSource = tablo;
         }
 
+        private void iptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow satır = dataGridView1.CurrentRow;
+            AdSoyad.Text=satır.Cells[0].Value.ToString();
+            TC.Text = satır.Cells[0].Value.ToString();
+            Telefon.Text = satır.Cells[0].Value.ToString();
+            Adres.Text = satır.Cells[0].Value.ToString();
+            Email.Text = satır.Cells[0].Value.ToString();
+
+        }
+
+        private void güncelle_Click(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QT2PTBG\\SQLEXPRESS;Initial Catalog=Araç_kiralama_oto;Integrated Security=True");
+            baglanti.Open();
+            string cümle = $"update müşteri set tc ='{TC.Text}',telefon='{Telefon.Text}',adres='{Adres.Text}',email='{Email.Text}' where adsoyad='{AdSoyad.Text}'";
+            SqlCommand komut2 = new SqlCommand(cümle,baglanti);
+            komut2.ExecuteNonQuery();
+            baglanti.Close();
+            baglanti.Open();
+            
+
+            string cümle1 = $"select * from müşteri where tc like '{textBox6.Text}%'";
+            SqlDataAdapter adtr2 = new SqlDataAdapter(cümle1, baglanti);
+            DataTable tablo = new DataTable();
+            adtr2.Fill(tablo);
+            dataGridView1.DataSource = tablo;
+            baglanti.Close();
+
+            //komut2.Parameters.AddWithValue("adsoyad",AdSoyad.Text);
+            //komut2.Parameters.AddWithValue("tc", TC.Text);
+            //komut2.Parameters.AddWithValue("telefon", Telefon.Text);
+            //komut2.Parameters.AddWithValue("adres", Adres.Text);
+            //komut2.Parameters.AddWithValue("email", Email.Text);
+            //arackiralama.ekle_sil_güncelle(komut2, cümle);
+            ////işlemin olup olmadığını görmek için
+            //foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+            //YenileListele();
+
+        }
+        private void sil_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow satır = dataGridView1.CurrentRow;
+            string cümle = "delete from müşteri where tc='"+satır.Cells["tc"].Value.ToString()+"'";
+            SqlCommand komut2 = new SqlCommand();
+            arackiralama.ekle_sil_güncelle(komut2, cümle);
+         
+            YenileListele();
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             Araçekle arcekle = new Araçekle();
@@ -79,6 +151,6 @@ namespace Projem
             this.Hide();
         }
 
-     
+        
     }
 }

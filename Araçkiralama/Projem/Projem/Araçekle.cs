@@ -63,5 +63,16 @@ namespace Projem
             satışlar.Show();
             this.Hide();
         }
+
+        private void ResimEkle_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pictureBox1.ImageLocation = openFileDialog1.FileName;
+        }
+
+        private void İptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
