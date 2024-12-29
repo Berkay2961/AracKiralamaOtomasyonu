@@ -39,14 +39,14 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Plakatxt = new System.Windows.Forms.TextBox();
+            this.Markacombo = new System.Windows.Forms.ComboBox();
+            this.Sericombo = new System.Windows.Forms.ComboBox();
+            this.Yakıtcombo = new System.Windows.Forms.ComboBox();
+            this.Modeltxt = new System.Windows.Forms.TextBox();
+            this.Renktxt = new System.Windows.Forms.TextBox();
+            this.Kmtxt = new System.Windows.Forms.TextBox();
+            this.Ücrettxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Kayıt = new System.Windows.Forms.Button();
             this.İptal = new System.Windows.Forms.Button();
             this.ResimEkle = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,10 +72,11 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1079, 608);
+            this.pictureBox1.Size = new System.Drawing.Size(1079, 607);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            
             // 
             // button8
             // 
@@ -241,69 +242,78 @@
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // textBox1
+            // Plakatxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(338, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 22);
-            this.textBox1.TabIndex = 9;
+            this.Plakatxt.Location = new System.Drawing.Point(338, 68);
+            this.Plakatxt.Name = "Plakatxt";
+            this.Plakatxt.Size = new System.Drawing.Size(131, 22);
+            this.Plakatxt.TabIndex = 9;
             // 
-            // comboBox1
+            // Markacombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(338, 109);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 24);
-            this.comboBox1.TabIndex = 10;
+            this.Markacombo.FormattingEnabled = true;
+            this.Markacombo.Items.AddRange(new object[] {
+            "Ford",
+            "Renault",
+            "Fiat",
+            "Hyundai",
+            "Opel",
+            "Audi",
+            "BMW"});
+            this.Markacombo.Location = new System.Drawing.Point(338, 109);
+            this.Markacombo.Name = "Markacombo";
+            this.Markacombo.Size = new System.Drawing.Size(131, 24);
+            this.Markacombo.TabIndex = 10;
+            this.Markacombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // Sericombo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(338, 157);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 24);
-            this.comboBox2.TabIndex = 11;
+            this.Sericombo.FormattingEnabled = true;
+            this.Sericombo.Location = new System.Drawing.Point(338, 157);
+            this.Sericombo.Name = "Sericombo";
+            this.Sericombo.Size = new System.Drawing.Size(131, 24);
+            this.Sericombo.TabIndex = 11;
             // 
-            // comboBox3
+            // Yakıtcombo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.Yakıtcombo.FormattingEnabled = true;
+            this.Yakıtcombo.Items.AddRange(new object[] {
             "Dizel",
             "Benzin",
             "Benzin/LPG",
             "Hybrid"});
-            this.comboBox3.Location = new System.Drawing.Point(338, 334);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(131, 24);
-            this.comboBox3.TabIndex = 12;
+            this.Yakıtcombo.Location = new System.Drawing.Point(338, 334);
+            this.Yakıtcombo.Name = "Yakıtcombo";
+            this.Yakıtcombo.Size = new System.Drawing.Size(131, 24);
+            this.Yakıtcombo.TabIndex = 12;
             // 
-            // textBox2
+            // Modeltxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(338, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 22);
-            this.textBox2.TabIndex = 13;
+            this.Modeltxt.Location = new System.Drawing.Point(338, 200);
+            this.Modeltxt.Name = "Modeltxt";
+            this.Modeltxt.Size = new System.Drawing.Size(131, 22);
+            this.Modeltxt.TabIndex = 13;
             // 
-            // textBox3
+            // Renktxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(338, 243);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 22);
-            this.textBox3.TabIndex = 14;
+            this.Renktxt.Location = new System.Drawing.Point(338, 243);
+            this.Renktxt.Name = "Renktxt";
+            this.Renktxt.Size = new System.Drawing.Size(131, 22);
+            this.Renktxt.TabIndex = 14;
             // 
-            // textBox4
+            // Kmtxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(338, 290);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 22);
-            this.textBox4.TabIndex = 15;
+            this.Kmtxt.Location = new System.Drawing.Point(338, 290);
+            this.Kmtxt.Name = "Kmtxt";
+            this.Kmtxt.Size = new System.Drawing.Size(131, 22);
+            this.Kmtxt.TabIndex = 15;
             // 
-            // textBox5
+            // Ücrettxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(338, 379);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 22);
-            this.textBox5.TabIndex = 16;
+            this.Ücrettxt.Location = new System.Drawing.Point(338, 379);
+            this.Ücrettxt.Name = "Ücrettxt";
+            this.Ücrettxt.Size = new System.Drawing.Size(131, 22);
+            this.Ücrettxt.TabIndex = 16;
             // 
             // label1
             // 
@@ -393,14 +403,14 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Kira Ücreti";
             // 
-            // pictureBox2
+            // pictureBox3
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(578, 68);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(270, 178);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox3.Location = new System.Drawing.Point(578, 68);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(281, 178);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 25;
+            this.pictureBox3.TabStop = false;
             // 
             // Kayıt
             // 
@@ -411,6 +421,7 @@
             this.Kayıt.TabIndex = 26;
             this.Kayıt.Text = "Kayıt";
             this.Kayıt.UseVisualStyleBackColor = true;
+            this.Kayıt.Click += new System.EventHandler(this.Kayıt_Click);
             // 
             // İptal
             // 
@@ -446,11 +457,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 608);
+            this.ClientSize = new System.Drawing.Size(1079, 607);
             this.Controls.Add(this.ResimEkle);
             this.Controls.Add(this.İptal);
             this.Controls.Add(this.Kayıt);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -459,21 +470,21 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Ücrettxt);
+            this.Controls.Add(this.Kmtxt);
+            this.Controls.Add(this.Renktxt);
+            this.Controls.Add(this.Modeltxt);
+            this.Controls.Add(this.Yakıtcombo);
+            this.Controls.Add(this.Sericombo);
+            this.Controls.Add(this.Markacombo);
+            this.Controls.Add(this.Plakatxt);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Araçekle";
             this.Text = "Araçekle";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,14 +501,14 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Plakatxt;
+        private System.Windows.Forms.ComboBox Markacombo;
+        private System.Windows.Forms.ComboBox Sericombo;
+        private System.Windows.Forms.ComboBox Yakıtcombo;
+        private System.Windows.Forms.TextBox Modeltxt;
+        private System.Windows.Forms.TextBox Renktxt;
+        private System.Windows.Forms.TextBox Kmtxt;
+        private System.Windows.Forms.TextBox Ücrettxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -506,7 +517,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button Kayıt;
         private System.Windows.Forms.Button İptal;
         private System.Windows.Forms.Button ResimEkle;

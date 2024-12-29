@@ -68,7 +68,7 @@ namespace Projem
         {
             SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QT2PTBG\\SQLEXPRESS;Initial Catalog=Araç_kiralama_oto;Integrated Security=True");
             baglanti.Open();
-            string cümle = $"update müşteri set tc ='{TC.Text}',telefon='{Telefon.Text}',adres='{Adres.Text}',email='{Email.Text}' where adsoyad='{AdSoyad.Text}'";
+            string cümle = $"update müşteri set adsoyad ='{AdSoyad.Text}',telefon='{Telefon.Text}',adres='{Adres.Text}',email='{Email.Text}' where tc='{TC.Text}'";
             SqlCommand komut2 = new SqlCommand(cümle,baglanti);
             komut2.ExecuteNonQuery();
             baglanti.Close();
