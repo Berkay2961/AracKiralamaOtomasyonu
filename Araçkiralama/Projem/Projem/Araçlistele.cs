@@ -21,7 +21,7 @@ namespace Projem
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow satır = dataGridView1.CurrentRow;
-            Plakatxt.Text = satır.Cells["plaka"].Value.ToString();
+            comboBox1.Text = satır.Cells["plaka"].Value.ToString();
             Markacombo.Text = satır.Cells["marka"].Value.ToString();
             Sericombo.Text = satır.Cells["seri"].Value.ToString();
             Modeltxt.Text = satır.Cells["model"].Value.ToString();
@@ -36,14 +36,18 @@ namespace Projem
         private void Araçlistele_Load(object sender, EventArgs e)
         {
             YenileAraçlarListesi();
-           
-            
+
                 comboAraçlar.SelectedIndex = 0;
-            
-            
-            
-                
-            
+            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QT2PTBG\\SQLEXPRESS;Initial Catalog=Araç_kiralama_oto;Integrated Security=True");
+            baglanti.Open();
+            SqlCommand cmd = new SqlCommand("select plaka from araç ", baglanti);
+            SqlDataReader veri= cmd.ExecuteReader();
+            while (veri.Read())
+            {
+                comboBox1.Items.Add(veri[0].ToString());
+
+            }
+            baglanti.Close();
 
         }
 
@@ -62,7 +66,7 @@ namespace Projem
         {
             string cümle = "update araç set marka=@marka,seri=@seri,model=@model,renk=@renk,km=@km,yakit=@yakit,kiraucreti=@kiraucreti,resim=@resim,tarih=@tarih where plaka=@plaka";
             SqlCommand komut2 = new SqlCommand();
-            komut2.Parameters.AddWithValue("@plaka",Plakatxt.Text);
+            komut2.Parameters.AddWithValue("@plaka",comboBox1.Text);
             komut2.Parameters.AddWithValue("@marka", Markacombo.Text);
             komut2.Parameters.AddWithValue("@seri", Sericombo.Text);
             komut2.Parameters.AddWithValue("@model", Modeltxt.Text);
@@ -84,7 +88,7 @@ namespace Projem
         private void btnSil_Click(object sender, EventArgs e)
         {
             DataGridViewRow satır = dataGridView1.CurrentRow;
-            string cümle = "delete from araç where plaka='" + satır.Cells["plaka"].Value.ToString() + "'";
+            string cümle = "delete from araç where plaka='" + comboBox1.Text + "'";
             SqlCommand komut2 = new SqlCommand(); 
             arackiralama.ekle_sil_güncelle(komut2,cümle);
             YenileAraçlarListesi();
@@ -176,6 +180,20 @@ namespace Projem
                 ;
             }
         }
+        //plakayı seçince resim çıkar
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QT2PTBG\\SQLEXPRESS;Initial Catalog=Araç_kiralama_oto;Integrated Security=True");
+            baglanti.Open();
+            SqlCommand cmd = new SqlCommand($"select resim from araç where plaka='{comboBox1.Text}'", baglanti);
+            SqlDataReader veri = cmd.ExecuteReader();
+            while (veri.Read())
+            {
+
+                pictureBox3.ImageLocation = veri[0].ToString();
+            }
+            baglanti.Close();
+        }
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -226,9 +244,14 @@ namespace Projem
             this.Hide();
         }
 
-      
+    
+
+        
+
+           
+        }
     }
 
 
-   }
+   
 

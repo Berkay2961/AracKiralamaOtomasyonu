@@ -50,7 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.Plakatxt = new System.Windows.Forms.TextBox();
             this.Modeltxt = new System.Windows.Forms.TextBox();
             this.Renktxt = new System.Windows.Forms.TextBox();
             this.Kmtxt = new System.Windows.Forms.TextBox();
@@ -67,6 +66,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.label9 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -363,13 +363,6 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Kira Ücreti";
             // 
-            // Plakatxt
-            // 
-            this.Plakatxt.Location = new System.Drawing.Point(292, 68);
-            this.Plakatxt.Name = "Plakatxt";
-            this.Plakatxt.Size = new System.Drawing.Size(130, 22);
-            this.Plakatxt.TabIndex = 20;
-            // 
             // Modeltxt
             // 
             this.Modeltxt.Location = new System.Drawing.Point(292, 200);
@@ -401,6 +394,14 @@
             // Markacombo
             // 
             this.Markacombo.FormattingEnabled = true;
+            this.Markacombo.Items.AddRange(new object[] {
+            "Ford",
+            "Renault",
+            "Fiat",
+            "Hyundai",
+            "Opel",
+            "Audi",
+            "BMW"});
             this.Markacombo.Location = new System.Drawing.Point(292, 113);
             this.Markacombo.Name = "Markacombo";
             this.Markacombo.Size = new System.Drawing.Size(130, 24);
@@ -418,6 +419,11 @@
             // Yakıtcombo
             // 
             this.Yakıtcombo.FormattingEnabled = true;
+            this.Yakıtcombo.Items.AddRange(new object[] {
+            "Dizel",
+            "Benzin",
+            "Benzin/LPG",
+            "Hybrid"});
             this.Yakıtcombo.Location = new System.Drawing.Point(292, 324);
             this.Yakıtcombo.Name = "Yakıtcombo";
             this.Yakıtcombo.Size = new System.Drawing.Size(130, 24);
@@ -494,11 +500,21 @@
             this.label9.Size = new System.Drawing.Size(0, 16);
             this.label9.TabIndex = 34;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(292, 64);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(130, 24);
+            this.comboBox1.TabIndex = 35;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Araçlistele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 608);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnSil);
@@ -512,7 +528,6 @@
             this.Controls.Add(this.Kmtxt);
             this.Controls.Add(this.Renktxt);
             this.Controls.Add(this.Modeltxt);
-            this.Controls.Add(this.Plakatxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -559,7 +574,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Plakatxt;
         private System.Windows.Forms.TextBox Modeltxt;
         private System.Windows.Forms.TextBox Renktxt;
         private System.Windows.Forms.TextBox Kmtxt;
@@ -576,5 +590,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ImageList ımageList2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
