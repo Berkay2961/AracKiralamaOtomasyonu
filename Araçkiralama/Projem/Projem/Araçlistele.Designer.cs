@@ -437,9 +437,9 @@
             // 
             // btnResim
             // 
-            this.btnResim.Location = new System.Drawing.Point(385, 446);
+            this.btnResim.Location = new System.Drawing.Point(495, 453);
             this.btnResim.Name = "btnResim";
-            this.btnResim.Size = new System.Drawing.Size(66, 54);
+            this.btnResim.Size = new System.Drawing.Size(108, 47);
             this.btnResim.TabIndex = 29;
             this.btnResim.Text = "Resim Değiştir";
             this.btnResim.UseVisualStyleBackColor = true;
@@ -447,9 +447,9 @@
             // 
             // btnGüncelle
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(210, 554);
+            this.btnGüncelle.Location = new System.Drawing.Point(631, 453);
             this.btnGüncelle.Name = "btnGüncelle";
-            this.btnGüncelle.Size = new System.Drawing.Size(99, 41);
+            this.btnGüncelle.Size = new System.Drawing.Size(99, 47);
             this.btnGüncelle.TabIndex = 30;
             this.btnGüncelle.Text = "Güncelle";
             this.btnGüncelle.UseVisualStyleBackColor = true;
@@ -457,16 +457,16 @@
             // 
             // btnİptal
             // 
-            this.btnİptal.Location = new System.Drawing.Point(347, 554);
+            this.btnİptal.Location = new System.Drawing.Point(767, 453);
             this.btnİptal.Name = "btnİptal";
-            this.btnİptal.Size = new System.Drawing.Size(89, 41);
+            this.btnİptal.Size = new System.Drawing.Size(94, 47);
             this.btnİptal.TabIndex = 31;
             this.btnİptal.Text = "İptal";
             this.btnİptal.UseVisualStyleBackColor = true;
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(1012, 446);
+            this.btnSil.Location = new System.Drawing.Point(1012, 449);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(101, 54);
             this.btnSil.TabIndex = 32;
@@ -476,9 +476,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(210, 402);
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(210, 407);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(154, 125);
+            this.pictureBox3.Size = new System.Drawing.Size(222, 160);
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
             // 

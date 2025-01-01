@@ -16,6 +16,18 @@ namespace Projem
         {
             InitializeComponent();
         }
+        Araç_kiralama_oto arac = new Araç_kiralama_oto();   
+        private void Sözleşme_Load(object sender, EventArgs e)
+        {
+            string sorgu2 = "select * from araç where durumu='Boş'";
+            arac.Boş_Araçlar(comboAraçlar,sorgu2);
+        }
+        private void txtTC_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTC.Text == "'") foreach (Control item in groupBox1.Controls) if (item is TextBox) item.Text = "'";
+            string sorgu2 = "select * from müşteri where tc like '" + txtTC.Text + "'";
+            arac.TC_Ara(txtTC,txtAdSoyad,txtTelefon,sorgu2);
+        }
 
         private void button9_Click(object sender, EventArgs e)
         {
@@ -56,5 +68,7 @@ namespace Projem
         {
 
         }
+
+      
     }
 }
