@@ -28,7 +28,16 @@ namespace Projem
             string sorgu2 = "select * from müşteri where tc like '" + txtTC.Text + "'";
             arac.TC_Ara(txtTC,txtAdSoyad,txtTelefon,sorgu2);
         }
-
+        private void comboAraçlar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sorgu2 = "select * from araç where plaka like '" + comboAraçlar.SelectedItem + "'";
+            arac.Combodan_Getir(comboAraçlar,txtMarka,txtSeri,txtModel,txtRenk, sorgu2);
+        }
+        private void comboKiraŞekli_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sorgu2 = "select * from araç where plaka like '" + comboAraçlar.SelectedItem + "'";
+            arac.Ücret_Hesapla(comboKiraŞekli,txtKiraÜcreti,sorgu2);
+        }
         private void button9_Click(object sender, EventArgs e)
         {
             Kazalıaraçlar kzlaraç = new Kazalıaraçlar();
@@ -69,6 +78,6 @@ namespace Projem
 
         }
 
-      
+     
     }
 }

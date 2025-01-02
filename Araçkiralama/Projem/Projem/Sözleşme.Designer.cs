@@ -53,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHesapla = new System.Windows.Forms.Button();
             this.btnGüncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.dateDönüş = new System.Windows.Forms.DateTimePicker();
@@ -380,6 +381,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnHesapla);
             this.groupBox2.Controls.Add(this.btnGüncelle);
             this.groupBox2.Controls.Add(this.btnEkle);
             this.groupBox2.Controls.Add(this.dateDönüş);
@@ -406,10 +408,19 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(489, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(557, 317);
+            this.groupBox2.Size = new System.Drawing.Size(588, 317);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AraçBilgileri";
+            // 
+            // btnHesapla
+            // 
+            this.btnHesapla.Location = new System.Drawing.Point(507, 111);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(75, 72);
+            this.btnHesapla.TabIndex = 24;
+            this.btnHesapla.Text = "Hesapla";
+            this.btnHesapla.UseVisualStyleBackColor = true;
             // 
             // btnGüncelle
             // 
@@ -497,10 +508,15 @@
             // comboKiraŞekli
             // 
             this.comboKiraŞekli.FormattingEnabled = true;
+            this.comboKiraŞekli.Items.AddRange(new object[] {
+            "Günlük",
+            "Haftalık",
+            "Aylık"});
             this.comboKiraŞekli.Location = new System.Drawing.Point(367, 33);
             this.comboKiraŞekli.Name = "comboKiraŞekli";
             this.comboKiraŞekli.Size = new System.Drawing.Size(121, 24);
             this.comboKiraŞekli.TabIndex = 12;
+            this.comboKiraŞekli.SelectedIndexChanged += new System.EventHandler(this.comboKiraŞekli_SelectedIndexChanged);
             // 
             // comboAraçlar
             // 
@@ -509,6 +525,7 @@
             this.comboAraçlar.Name = "comboAraçlar";
             this.comboAraçlar.Size = new System.Drawing.Size(121, 24);
             this.comboAraçlar.TabIndex = 11;
+            this.comboAraçlar.SelectedIndexChanged += new System.EventHandler(this.comboAraçlar_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -708,5 +725,6 @@
         private System.Windows.Forms.Button btnGüncelle;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnAraçTeslim;
+        private System.Windows.Forms.Button btnHesapla;
     }
 }
