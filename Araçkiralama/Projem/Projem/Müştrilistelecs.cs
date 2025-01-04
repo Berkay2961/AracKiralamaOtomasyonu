@@ -21,6 +21,10 @@ namespace Projem
         }
         private void Müştrilistele_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(200, 150);
+            // Ekranda belirli bir pozisyon 
+
             YenileListele();
         }
 
@@ -123,12 +127,7 @@ namespace Projem
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Kazalıaraçlar kzlaraç = new Kazalıaraçlar();
-            kzlaraç.Show();
-            this.Hide();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {

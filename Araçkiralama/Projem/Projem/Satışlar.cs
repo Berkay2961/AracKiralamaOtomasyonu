@@ -59,11 +59,11 @@ namespace Projem
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Satışlar_Load(object sender, EventArgs e)
         {
-            Kazalıaraçlar kzlaraç = new Kazalıaraçlar();
-            kzlaraç.Show();
-            this.Hide();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(200, 150);
+            // Ekranda belirli bir pozisyon 
         }
     }
 }

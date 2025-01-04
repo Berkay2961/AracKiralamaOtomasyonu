@@ -30,16 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sözleşme));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTCAra = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtE_Yer = new System.Windows.Forms.TextBox();
             this.txtE_Tarih = new System.Windows.Forms.TextBox();
             this.txtE_No = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTemizle = new System.Windows.Forms.Button();
             this.btnHesapla = new System.Windows.Forms.Button();
             this.btnGüncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -80,8 +80,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAraçTeslim = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,26 +94,8 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1089, 708);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button13);
-            this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button15);
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 611);
-            this.panel2.TabIndex = 10;
             // 
             // button13
             // 
@@ -125,14 +107,13 @@
             this.button13.ForeColor = System.Drawing.Color.Black;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(0, 0);
+            this.button13.Location = new System.Drawing.Point(0, 26);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(197, 71);
             this.button13.TabIndex = 8;
             this.button13.Text = "Anasayfa      ";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -144,7 +125,7 @@
             this.button14.ForeColor = System.Drawing.Color.Black;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(1, 68);
+            this.button14.Location = new System.Drawing.Point(0, 106);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(196, 74);
             this.button14.TabIndex = 7;
@@ -152,58 +133,6 @@
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1, 537);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(196, 74);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Satışlar          ";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(1, 458);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(196, 74);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Kazalı Araçlar ";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.DarkRed;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 388);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(196, 74);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Sözleşme      ";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
@@ -214,7 +143,7 @@
             this.button11.ForeColor = System.Drawing.Color.Black;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(0, 308);
+            this.button11.Location = new System.Drawing.Point(0, 346);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(196, 74);
             this.button11.TabIndex = 3;
@@ -233,7 +162,7 @@
             this.button12.ForeColor = System.Drawing.Color.Black;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(0, 228);
+            this.button12.Location = new System.Drawing.Point(1, 266);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(196, 74);
             this.button12.TabIndex = 2;
@@ -252,7 +181,7 @@
             this.button15.ForeColor = System.Drawing.Color.Black;
             this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
             this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(1, 148);
+            this.button15.Location = new System.Drawing.Point(0, 184);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(196, 74);
             this.button15.TabIndex = 1;
@@ -261,8 +190,27 @@
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.DarkRed;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 426);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(196, 74);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "Sözleşme      ";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTCAra);
+            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.txtE_Yer);
             this.groupBox1.Controls.Add(this.txtE_Tarih);
             this.groupBox1.Controls.Add(this.txtE_No);
@@ -282,37 +230,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MüşteriBilgileri";
             // 
+            // txtTCAra
+            // 
+            this.txtTCAra.Location = new System.Drawing.Point(108, 33);
+            this.txtTCAra.Name = "txtTCAra";
+            this.txtTCAra.Size = new System.Drawing.Size(117, 22);
+            this.txtTCAra.TabIndex = 13;
+            this.txtTCAra.TextChanged += new System.EventHandler(this.txtTCAra_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(12, 41);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 16);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "TC Ara";
+            // 
             // txtE_Yer
             // 
-            this.txtE_Yer.Location = new System.Drawing.Point(108, 226);
+            this.txtE_Yer.Location = new System.Drawing.Point(108, 278);
             this.txtE_Yer.Name = "txtE_Yer";
             this.txtE_Yer.Size = new System.Drawing.Size(117, 22);
             this.txtE_Yer.TabIndex = 11;
             // 
             // txtE_Tarih
             // 
-            this.txtE_Tarih.Location = new System.Drawing.Point(108, 188);
+            this.txtE_Tarih.Location = new System.Drawing.Point(108, 240);
             this.txtE_Tarih.Name = "txtE_Tarih";
             this.txtE_Tarih.Size = new System.Drawing.Size(117, 22);
             this.txtE_Tarih.TabIndex = 10;
             // 
             // txtE_No
             // 
-            this.txtE_No.Location = new System.Drawing.Point(108, 147);
+            this.txtE_No.Location = new System.Drawing.Point(108, 202);
             this.txtE_No.Name = "txtE_No";
             this.txtE_No.Size = new System.Drawing.Size(117, 22);
             this.txtE_No.TabIndex = 9;
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(108, 108);
+            this.txtTelefon.Location = new System.Drawing.Point(108, 160);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(117, 22);
             this.txtTelefon.TabIndex = 8;
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(108, 70);
+            this.txtTC.Location = new System.Drawing.Point(108, 120);
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(117, 22);
             this.txtTC.TabIndex = 7;
@@ -320,7 +286,7 @@
             // 
             // txtAdSoyad
             // 
-            this.txtAdSoyad.Location = new System.Drawing.Point(108, 28);
+            this.txtAdSoyad.Location = new System.Drawing.Point(108, 76);
             this.txtAdSoyad.Name = "txtAdSoyad";
             this.txtAdSoyad.Size = new System.Drawing.Size(117, 22);
             this.txtAdSoyad.TabIndex = 6;
@@ -328,7 +294,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 226);
+            this.label6.Location = new System.Drawing.Point(10, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 16);
             this.label6.TabIndex = 5;
@@ -337,7 +303,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 188);
+            this.label5.Location = new System.Drawing.Point(10, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 16);
             this.label5.TabIndex = 4;
@@ -346,7 +312,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 147);
+            this.label4.Location = new System.Drawing.Point(10, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 3;
@@ -355,7 +321,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 108);
+            this.label3.Location = new System.Drawing.Point(10, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 2;
@@ -364,7 +330,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 70);
+            this.label2.Location = new System.Drawing.Point(10, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 16);
             this.label2.TabIndex = 1;
@@ -373,7 +339,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 28);
+            this.label1.Location = new System.Drawing.Point(10, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 0;
@@ -381,6 +347,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnTemizle);
             this.groupBox2.Controls.Add(this.btnHesapla);
             this.groupBox2.Controls.Add(this.btnGüncelle);
             this.groupBox2.Controls.Add(this.btnEkle);
@@ -413,6 +380,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AraçBilgileri";
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(386, 268);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(102, 43);
+            this.btnTemizle.TabIndex = 25;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
             // btnHesapla
             // 
             this.btnHesapla.Location = new System.Drawing.Point(507, 111);
@@ -421,6 +398,7 @@
             this.btnHesapla.TabIndex = 24;
             this.btnHesapla.Text = "Hesapla";
             this.btnHesapla.UseVisualStyleBackColor = true;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
             // 
             // btnGüncelle
             // 
@@ -430,6 +408,7 @@
             this.btnGüncelle.TabIndex = 23;
             this.btnGüncelle.Text = "Sözleşme Güncelle";
             this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnEkle
             // 
@@ -439,6 +418,7 @@
             this.btnEkle.TabIndex = 22;
             this.btnEkle.Text = "Sözleşme Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dateDönüş
             // 
@@ -631,12 +611,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(229, 388);
+            this.dataGridView1.Location = new System.Drawing.Point(229, 381);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(817, 240);
-            this.dataGridView1.TabIndex = 13;
+           
             // 
             // btnAraçTeslim
             // 
@@ -647,23 +627,46 @@
             this.btnAraçTeslim.Text = "Araç Teslim";
             this.btnAraçTeslim.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(1, 506);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(196, 74);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Satışlar          ";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Sözleşme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 708);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.btnAraçTeslim);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Sözleşme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sözleşme";
             this.Load += new System.EventHandler(this.Sözleşme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -676,11 +679,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
@@ -726,5 +726,9 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnAraçTeslim;
         private System.Windows.Forms.Button btnHesapla;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.TextBox txtTCAra;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button7;
     }
 }

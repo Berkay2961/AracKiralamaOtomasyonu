@@ -33,7 +33,9 @@ namespace Projem
 
         private void Anasayfacs_Load(object sender, EventArgs e)
         {
-
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(200, 150);
+            // Ekranda belirli bir pozisyon 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -57,11 +59,6 @@ namespace Projem
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Kazalıaraçlar kzlaraç = new Kazalıaraçlar();
-            kzlaraç.Show();
-            this.Hide();
-        }
+     
     }
 }

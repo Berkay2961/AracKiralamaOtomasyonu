@@ -120,12 +120,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kazalıaraçlar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Kazalıaraçlar.Designer.cs">
-      <DependentUpon>Kazalıaraçlar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Müşteriekle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Kazalıaraçlar.resx">
-      <DependentUpon>Kazalıaraçlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Müşteriekle.resx">
       <DependentUpon>Müşteriekle.cs</DependentUpon>
