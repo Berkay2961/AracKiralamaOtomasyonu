@@ -36,11 +36,7 @@ namespace Projem
             //müşteri ekleme
             string cümle = $"insert into müşteri(adsoyad,tc,telefon,adres,email) values('{txtAdsoyad.Text}','{txtTC.Text}','{txtTelefon.Text}','{txtAdres.Text}','{txtEmail.Text}')";
             SqlCommand komut2 = new SqlCommand();
-            //komut2.Parameters.AddWithValue("_adsoyad",txtAdsoyad.Text);
-            //komut2.Parameters.AddWithValue("_tc", txtTC.Text);
-            //komut2.Parameters.AddWithValue("_telefon", txtTelefon.Text);
-            //komut2.Parameters.AddWithValue("_adres", txtAdres.Text);
-            //komut2.Parameters.AddWithValue("_email", txtEmail.Text);
+            
             arac_kiralama.ekle_sil_güncelle(komut2,cümle);
             //işlemin olup olmadığını görmek için
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";

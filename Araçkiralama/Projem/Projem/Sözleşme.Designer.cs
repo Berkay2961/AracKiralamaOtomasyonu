@@ -45,8 +45,8 @@
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtTC = new System.Windows.Forms.TextBox();
             this.txtAdSoyad = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblE_Yer = new System.Windows.Forms.Label();
+            this.lblE_Tarih = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,6 +81,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAraçTeslim = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.txtEkstra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -217,8 +219,8 @@
             this.groupBox1.Controls.Add(this.txtTelefon);
             this.groupBox1.Controls.Add(this.txtTC);
             this.groupBox1.Controls.Add(this.txtAdSoyad);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblE_Yer);
+            this.groupBox1.Controls.Add(this.lblE_Tarih);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -291,23 +293,23 @@
             this.txtAdSoyad.Size = new System.Drawing.Size(117, 22);
             this.txtAdSoyad.TabIndex = 6;
             // 
-            // label6
+            // lblE_Yer
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 281);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "E_Verilen Yer";
+            this.lblE_Yer.AutoSize = true;
+            this.lblE_Yer.Location = new System.Drawing.Point(10, 281);
+            this.lblE_Yer.Name = "lblE_Yer";
+            this.lblE_Yer.Size = new System.Drawing.Size(89, 16);
+            this.lblE_Yer.TabIndex = 5;
+            this.lblE_Yer.Text = "E_Verilen Yer";
             // 
-            // label5
+            // lblE_Tarih
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 246);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ehliyet Tarihi";
+            this.lblE_Tarih.AutoSize = true;
+            this.lblE_Tarih.Location = new System.Drawing.Point(10, 246);
+            this.lblE_Tarih.Name = "lblE_Tarih";
+            this.lblE_Tarih.Size = new System.Drawing.Size(84, 16);
+            this.lblE_Tarih.TabIndex = 4;
+            this.lblE_Tarih.Text = "Ehliyet Tarihi";
             // 
             // label4
             // 
@@ -382,41 +384,53 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(386, 268);
+            this.btnTemizle.Image = ((System.Drawing.Image)(resources.GetObject("btnTemizle.Image")));
+            this.btnTemizle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTemizle.Location = new System.Drawing.Point(348, 257);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(102, 43);
+            this.btnTemizle.Size = new System.Drawing.Size(122, 54);
             this.btnTemizle.TabIndex = 25;
             this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // btnHesapla
             // 
-            this.btnHesapla.Location = new System.Drawing.Point(507, 111);
+            this.btnHesapla.Image = ((System.Drawing.Image)(resources.GetObject("btnHesapla.Image")));
+            this.btnHesapla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHesapla.Location = new System.Drawing.Point(473, 257);
             this.btnHesapla.Name = "btnHesapla";
-            this.btnHesapla.Size = new System.Drawing.Size(75, 72);
+            this.btnHesapla.Size = new System.Drawing.Size(115, 54);
             this.btnHesapla.TabIndex = 24;
             this.btnHesapla.Text = "Hesapla";
+            this.btnHesapla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHesapla.UseVisualStyleBackColor = true;
             this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
             // 
             // btnGüncelle
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(159, 254);
+            this.btnGüncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnGüncelle.Image")));
+            this.btnGüncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGüncelle.Location = new System.Drawing.Point(169, 257);
             this.btnGüncelle.Name = "btnGüncelle";
-            this.btnGüncelle.Size = new System.Drawing.Size(103, 57);
+            this.btnGüncelle.Size = new System.Drawing.Size(175, 54);
             this.btnGüncelle.TabIndex = 23;
             this.btnGüncelle.Text = "Sözleşme Güncelle";
+            this.btnGüncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGüncelle.UseVisualStyleBackColor = true;
             this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(26, 254);
+            this.btnEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.Image")));
+            this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEkle.Location = new System.Drawing.Point(0, 257);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(105, 57);
+            this.btnEkle.Size = new System.Drawing.Size(163, 54);
             this.btnEkle.TabIndex = 22;
             this.btnEkle.Text = "Sözleşme Ekle";
+            this.btnEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
@@ -616,16 +630,22 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(817, 240);
-           
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnAraçTeslim
             // 
-            this.btnAraçTeslim.Location = new System.Drawing.Point(930, 644);
+            this.btnAraçTeslim.Image = ((System.Drawing.Image)(resources.GetObject("btnAraçTeslim.Image")));
+            this.btnAraçTeslim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAraçTeslim.Location = new System.Drawing.Point(906, 638);
             this.btnAraçTeslim.Name = "btnAraçTeslim";
-            this.btnAraçTeslim.Size = new System.Drawing.Size(116, 52);
+            this.btnAraçTeslim.Size = new System.Drawing.Size(165, 52);
             this.btnAraçTeslim.TabIndex = 14;
             this.btnAraçTeslim.Text = "Araç Teslim";
+            this.btnAraçTeslim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAraçTeslim.UseVisualStyleBackColor = true;
+            this.btnAraçTeslim.Click += new System.EventHandler(this.btnAraçTeslim_Click);
             // 
             // button7
             // 
@@ -645,11 +665,31 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // txtEkstra
+            // 
+            this.txtEkstra.Location = new System.Drawing.Point(751, 668);
+            this.txtEkstra.Name = "txtEkstra";
+            this.txtEkstra.Size = new System.Drawing.Size(135, 22);
+            this.txtEkstra.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Firebrick;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(486, 674);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 16);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Alacak/Verecek Durumu";
+            // 
             // Sözleşme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 708);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtEkstra);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button13);
@@ -673,6 +713,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -688,8 +729,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblE_Yer;
+        private System.Windows.Forms.Label lblE_Tarih;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -730,5 +771,7 @@
         private System.Windows.Forms.TextBox txtTCAra;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox txtEkstra;
+        private System.Windows.Forms.Label label5;
     }
 }

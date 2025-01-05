@@ -87,6 +87,7 @@ namespace Projem
             pictureBox3.ImageLocation = "";
             YenileAraçlarListesi();
 
+            MessageBox.Show("Bilgiler güncellenmiştir");
 
         }
         private void btnSil_Click(object sender, EventArgs e)
@@ -100,7 +101,9 @@ namespace Projem
             Sericombo.Items.Clear();
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
             foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
-            
+
+            MessageBox.Show("Başarı ile silindi");
+
         }
 
         private void Markacombo_SelectedIndexChanged(object sender, EventArgs e)

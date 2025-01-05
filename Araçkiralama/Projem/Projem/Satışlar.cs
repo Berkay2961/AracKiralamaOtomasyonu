@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,18 @@ namespace Projem
         {
             InitializeComponent();
         }
+        Araç_kiralama_oto arac= new Araç_kiralama_oto();
+        private void Satışlar_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(200, 150);
+            // Ekranda belirli bir pozisyon 
 
+            string sorgu2 = "select * from satış";
+            SqlDataAdapter adtr2 = new SqlDataAdapter();
+            dataGridView1.DataSource = arac.listele(adtr2,sorgu2);
+            arac.satışhesapla(label1);
+        }
         private void button15_Click(object sender, EventArgs e)
         {
             Müştrilistele mştls = new Müştrilistele();
@@ -59,11 +71,6 @@ namespace Projem
             this.Hide();
         }
 
-        private void Satışlar_Load(object sender, EventArgs e)
-        {
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(200, 150);
-            // Ekranda belirli bir pozisyon 
-        }
+     
     }
 }

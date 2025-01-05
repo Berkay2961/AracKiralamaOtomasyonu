@@ -289,7 +289,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Brown;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(52, 191);
+            this.label7.Location = new System.Drawing.Point(45, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 16);
             this.label7.TabIndex = 18;
@@ -300,7 +300,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Brown;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(52, 221);
+            this.label8.Location = new System.Drawing.Point(16, 221);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 16);
             this.label8.TabIndex = 19;
@@ -380,40 +380,52 @@
             // 
             // btnResim
             // 
-            this.btnResim.Location = new System.Drawing.Point(526, 456);
+            this.btnResim.Image = ((System.Drawing.Image)(resources.GetObject("btnResim.Image")));
+            this.btnResim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResim.Location = new System.Drawing.Point(504, 474);
             this.btnResim.Name = "btnResim";
-            this.btnResim.Size = new System.Drawing.Size(108, 47);
+            this.btnResim.Size = new System.Drawing.Size(173, 49);
             this.btnResim.TabIndex = 29;
             this.btnResim.Text = "Resim Değiştir";
+            this.btnResim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnResim.UseVisualStyleBackColor = true;
             this.btnResim.Click += new System.EventHandler(this.btnResim_Click);
             // 
             // btnGüncelle
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(651, 456);
+            this.btnGüncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnGüncelle.Image")));
+            this.btnGüncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGüncelle.Location = new System.Drawing.Point(891, 474);
             this.btnGüncelle.Name = "btnGüncelle";
-            this.btnGüncelle.Size = new System.Drawing.Size(99, 47);
+            this.btnGüncelle.Size = new System.Drawing.Size(173, 47);
             this.btnGüncelle.TabIndex = 30;
             this.btnGüncelle.Text = "Güncelle";
+            this.btnGüncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGüncelle.UseVisualStyleBackColor = true;
             this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnİptal
             // 
-            this.btnİptal.Location = new System.Drawing.Point(767, 458);
+            this.btnİptal.Image = ((System.Drawing.Image)(resources.GetObject("btnİptal.Image")));
+            this.btnİptal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnİptal.Location = new System.Drawing.Point(697, 475);
             this.btnİptal.Name = "btnİptal";
-            this.btnİptal.Size = new System.Drawing.Size(94, 47);
+            this.btnİptal.Size = new System.Drawing.Size(173, 47);
             this.btnİptal.TabIndex = 31;
             this.btnİptal.Text = "İptal";
+            this.btnİptal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnİptal.UseVisualStyleBackColor = true;
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(1070, 456);
+            this.btnSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.Image")));
+            this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSil.Location = new System.Drawing.Point(891, 537);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(101, 50);
+            this.btnSil.Size = new System.Drawing.Size(173, 50);
             this.btnSil.TabIndex = 32;
             this.btnSil.Text = "Kayıt Sil";
+            this.btnSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 

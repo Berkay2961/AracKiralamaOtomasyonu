@@ -150,10 +150,11 @@ namespace Projem
             foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
             pictureBox3.ImageLocation = "";
 
-            
+            MessageBox.Show("Araç başarı ile eklenmiştir.");
 
 
         }
+       
 
         private void Araçekle_Load(object sender, EventArgs e)
         {
@@ -161,5 +162,7 @@ namespace Projem
             this.Location = new Point(200, 150);
             // Ekranda belirli bir pozisyon 
         }
+
+       
     }
 }

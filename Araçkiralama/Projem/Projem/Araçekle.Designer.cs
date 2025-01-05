@@ -375,33 +375,42 @@
             // Kayıt
             // 
             this.Kayıt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Kayıt.Location = new System.Drawing.Point(245, 458);
+            this.Kayıt.Image = ((System.Drawing.Image)(resources.GetObject("Kayıt.Image")));
+            this.Kayıt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kayıt.Location = new System.Drawing.Point(203, 458);
             this.Kayıt.Name = "Kayıt";
-            this.Kayıt.Size = new System.Drawing.Size(100, 56);
+            this.Kayıt.Size = new System.Drawing.Size(142, 56);
             this.Kayıt.TabIndex = 26;
             this.Kayıt.Text = "Kayıt";
+            this.Kayıt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Kayıt.UseVisualStyleBackColor = true;
             this.Kayıt.Click += new System.EventHandler(this.Kayıt_Click);
             // 
             // İptal
             // 
             this.İptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.İptal.Image = ((System.Drawing.Image)(resources.GetObject("İptal.Image")));
+            this.İptal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.İptal.Location = new System.Drawing.Point(370, 458);
             this.İptal.Name = "İptal";
-            this.İptal.Size = new System.Drawing.Size(99, 56);
+            this.İptal.Size = new System.Drawing.Size(136, 56);
             this.İptal.TabIndex = 27;
             this.İptal.Text = "İptal";
+            this.İptal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.İptal.UseVisualStyleBackColor = true;
             this.İptal.Click += new System.EventHandler(this.İptal_Click);
             // 
             // ResimEkle
             // 
             this.ResimEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ResimEkle.Image = ((System.Drawing.Image)(resources.GetObject("ResimEkle.Image")));
+            this.ResimEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ResimEkle.Location = new System.Drawing.Point(655, 290);
             this.ResimEkle.Name = "ResimEkle";
-            this.ResimEkle.Size = new System.Drawing.Size(124, 68);
+            this.ResimEkle.Size = new System.Drawing.Size(173, 68);
             this.ResimEkle.TabIndex = 28;
             this.ResimEkle.Text = "Resim Ekle";
+            this.ResimEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ResimEkle.UseVisualStyleBackColor = true;
             this.ResimEkle.Click += new System.EventHandler(this.ResimEkle_Click);
             // 

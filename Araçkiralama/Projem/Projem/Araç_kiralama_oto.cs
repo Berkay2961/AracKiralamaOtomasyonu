@@ -81,6 +81,7 @@ namespace Projem
             }
             baglanti.Close();
         }
+
         public void Ücret_Hesapla(ComboBox comboKiraŞekli,TextBox ucret, string sorgu)
         {
             baglanti.Open();
@@ -92,6 +93,13 @@ namespace Projem
                 if (comboKiraŞekli.SelectedIndex == 1) ucret.Text = (int.Parse(read["kiraucreti"].ToString()) * 0.80).ToString();
                 if (comboKiraŞekli.SelectedIndex == 2) ucret.Text = (int.Parse(read["kiraucreti"].ToString()) * 0.70).ToString();
             }
+            baglanti.Close();
+        }
+        public void satışhesapla(Label lbl)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select sum(tutar) from satış",baglanti);
+            lbl.Text = "Toplam Tutar" + komut.ExecuteScalar() + "TL";
             baglanti.Close();
         }
 

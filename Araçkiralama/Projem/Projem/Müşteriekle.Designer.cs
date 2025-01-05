@@ -286,22 +286,28 @@
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.Image")));
+            this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.Location = new System.Drawing.Point(330, 334);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(125, 48);
             this.btnEkle.TabIndex = 20;
             this.btnEkle.Text = "Ekle";
+            this.btnEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnİptal
             // 
             this.btnİptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnİptal.Image = ((System.Drawing.Image)(resources.GetObject("btnİptal.Image")));
+            this.btnİptal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnİptal.Location = new System.Drawing.Point(471, 334);
             this.btnİptal.Name = "btnİptal";
             this.btnİptal.Size = new System.Drawing.Size(120, 48);
             this.btnİptal.TabIndex = 21;
             this.btnİptal.Text = "İptal";
+            this.btnİptal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnİptal.UseVisualStyleBackColor = true;
             this.btnİptal.Click += new System.EventHandler(this.button2_Click);
             // 

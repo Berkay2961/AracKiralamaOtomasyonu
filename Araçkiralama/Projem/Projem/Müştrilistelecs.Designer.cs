@@ -200,7 +200,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(467, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(475, 101);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -301,33 +301,42 @@
             // güncelle
             // 
             this.güncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.güncelle.Location = new System.Drawing.Point(233, 332);
+            this.güncelle.Image = ((System.Drawing.Image)(resources.GetObject("güncelle.Image")));
+            this.güncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.güncelle.Location = new System.Drawing.Point(203, 332);
             this.güncelle.Name = "güncelle";
-            this.güncelle.Size = new System.Drawing.Size(92, 45);
+            this.güncelle.Size = new System.Drawing.Size(130, 45);
             this.güncelle.TabIndex = 17;
             this.güncelle.Text = "Güncelle";
+            this.güncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.güncelle.UseVisualStyleBackColor = true;
             this.güncelle.Click += new System.EventHandler(this.güncelle_Click);
             // 
             // iptal
             // 
             this.iptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.iptal.Location = new System.Drawing.Point(357, 332);
+            this.iptal.Image = ((System.Drawing.Image)(resources.GetObject("iptal.Image")));
+            this.iptal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iptal.Location = new System.Drawing.Point(339, 332);
             this.iptal.Name = "iptal";
-            this.iptal.Size = new System.Drawing.Size(90, 45);
+            this.iptal.Size = new System.Drawing.Size(130, 45);
             this.iptal.TabIndex = 18;
             this.iptal.Text = "İptal";
+            this.iptal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iptal.UseVisualStyleBackColor = true;
             this.iptal.Click += new System.EventHandler(this.iptal_Click);
             // 
             // sil
             // 
             this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sil.Location = new System.Drawing.Point(985, 101);
+            this.sil.Image = ((System.Drawing.Image)(resources.GetObject("sil.Image")));
+            this.sil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sil.Location = new System.Drawing.Point(961, 25);
             this.sil.Name = "sil";
-            this.sil.Size = new System.Drawing.Size(86, 42);
+            this.sil.Size = new System.Drawing.Size(110, 57);
             this.sil.TabIndex = 19;
             this.sil.Text = "Sil";
+            this.sil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sil.UseVisualStyleBackColor = true;
             this.sil.Click += new System.EventHandler(this.sil_Click);
             // 

@@ -86,15 +86,7 @@ namespace Projem
             dataGridView1.DataSource = tablo;
             baglanti.Close();
 
-            //komut2.Parameters.AddWithValue("adsoyad",AdSoyad.Text);
-            //komut2.Parameters.AddWithValue("tc", TC.Text);
-            //komut2.Parameters.AddWithValue("telefon", Telefon.Text);
-            //komut2.Parameters.AddWithValue("adres", Adres.Text);
-            //komut2.Parameters.AddWithValue("email", Email.Text);
-            //arackiralama.ekle_sil_güncelle(komut2, cümle);
-            ////işlemin olup olmadığını görmek için
-            //foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            //YenileListele();
+            MessageBox.Show("Güncellendi");
 
         }
         private void sil_Click(object sender, EventArgs e)
@@ -105,6 +97,7 @@ namespace Projem
             arackiralama.ekle_sil_güncelle(komut2, cümle);
          
             YenileListele();
+            MessageBox.Show("Başarı ile silindi");
         }
         private void button3_Click(object sender, EventArgs e)
         {

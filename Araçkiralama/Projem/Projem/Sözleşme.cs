@@ -124,13 +124,13 @@ namespace Projem
         }
         private void txtTCAra_TextChanged(object sender, EventArgs e)
         {
-            if (txtTC.Text == "'") foreach (Control item in groupBox1.Controls) if (item is TextBox) item.Text = "'";
+            if (txtTCAra.Text == "'") foreach (Control item in groupBox1.Controls) if (item is TextBox) item.Text = "'";
             string sorgu2 = "select * from müşteri where tc like '" + txtTCAra.Text + "'";
             arac.TC_Ara(txtTCAra,txtTC, txtAdSoyad, txtTelefon, sorgu2);
         }
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
-            string sorgu2 = "update sözleşme set adsoyad=@adsoyad,tc=@tc,telefon=@telefon,ehliyetno=@ehliyetno,e_tarih=@e_tarih,marka=@marka,seri=@seri,model=@model,renk=@renk,kirasekli=@kirasekli,kiraucreti=@kiraucreti,gun=@gun,tutar=@tutar,ctarih=@ctarih,dtarih=@dtarih where plaka=@plaka";
+            string sorgu2 = "update sözleşme set adsoyad=@adsoyad,tc=@tc,telefon=@telefon,ehliyetno=@ehliyetno,e_tarih=@e_tarih,e_yer=@e_yer,marka=@marka,seri=@seri,model=@model,renk=@renk,kirasekli=@kirasekli,kiraucreti=@kiraucreti,gun=@gun,tutar=@tutar,c_tarih=@c_tarih,d_tarih=@d_tarih where plaka=@plaka";
             SqlCommand komut2 = new SqlCommand();
             komut2.Parameters.AddWithValue("@adsoyad", txtAdSoyad.Text);
             komut2.Parameters.AddWithValue("@tc", txtTC.Text);
@@ -168,7 +168,105 @@ namespace Projem
             Temizle();
             MessageBox.Show("Sözleşme başarı ile güncellendi");
         }
-        
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow satır = dataGridView1.CurrentRow;
+            txtAdSoyad.Text = satır.Cells[0].Value.ToString();
+            txtTC.Text = satır.Cells[1].Value.ToString();
+            txtTelefon.Text = satır.Cells[2].Value.ToString();
+            txtE_No.Text = satır.Cells[3].Value.ToString();
+            txtE_No.Text = satır.Cells[4].Value.ToString();
+            txtE_Yer.Text = satır.Cells[5].Value.ToString();
+            comboAraçlar.Text = satır.Cells[6].Value.ToString();
+            txtMarka.Text = satır.Cells[7].Value.ToString();
+            txtSeri.Text = satır.Cells[8].Value.ToString();
+            txtModel.Text = satır.Cells[9].Value.ToString();
+            txtRenk.Text = satır.Cells[10].Value.ToString();
+            comboKiraŞekli.Text = satır.Cells[11].Value.ToString();
+            txtKiraÜcreti.Text = satır.Cells[12].Value.ToString();
+            txtGün.Text = satır.Cells[13].Value.ToString();
+            txtTutar.Text = satır.Cells[14].Value.ToString();
+            dateÇıkış.Text = satır.Cells[15].Value.ToString();
+            dateDönüş.Text = satır.Cells[16].Value.ToString();
+
+
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow satır = dataGridView1.CurrentRow;
+            //Gün farkı hesaplama
+            DateTime bugün=DateTime.Parse(DateTime.Now.ToShortDateString());
+            DateTime dönüş =DateTime.Parse(satır.Cells["d_tarih"].Value.ToString());
+            int ucret = int.Parse(satır.Cells["kiraucreti"].Value.ToString()) ;
+            TimeSpan gunfarkı = bugün - dönüş;
+            int _gunfarkı = gunfarkı.Days;
+            int ucretfarkı;
+            //ücret farkını hesaplama
+            ucretfarkı = _gunfarkı * ucret;
+            txtEkstra.Text=ucretfarkı.ToString();
+            //toplam tutar hesapla
+
+        }
+        private void btnAraçTeslim_Click(object sender, EventArgs e)
+        {
+            if(int.Parse(txtEkstra.Text)>=0 || int.Parse(txtEkstra.Text)<0)
+            {
+                DataGridViewRow satır = dataGridView1.CurrentRow;
+                DateTime bugün = DateTime.Parse(DateTime.Now.ToShortDateString());
+                int ucret = int.Parse(satır.Cells["kiraucreti"].Value.ToString());
+                int tutar = int.Parse(satır.Cells["tutar"].Value.ToString());
+                DateTime çıkış = DateTime.Parse(satır.Cells["c_tarih"].Value.ToString());
+                TimeSpan gun = bugün - çıkış;
+                int _gun = gun.Days;
+                int toplamtutar = _gun * ucret;
+                //toplamtutar, _gun ve ücret satış tablosuna aktarılacak
+                string sorgu1 = "delete from sözleşme where plaka='" + satır.Cells["plaka"].Value.ToString() + "'";
+                SqlCommand komut = new SqlCommand();
+                arac.ekle_sil_güncelle(komut, sorgu1);
+                string sorgu2 = "update araç set durumu='Boş' where plaka='" + satır.Cells["plaka"].Value.ToString() + "'";
+                SqlCommand komut3 = new SqlCommand();
+                arac.ekle_sil_güncelle(komut3, sorgu2);
+
+                string sorgu3 = "insert into satış(adsoyad,tc,plaka,marka,seri,model,renk,gun,tutar,tarih_1,tarih_2,fiyat) values(@adsoyad,@tc,@plaka,@marka,@seri,@model,@renk,@gun,@tutar,@tarih_1,@tarih_2,@fiyat)";
+                SqlCommand komut2 = new SqlCommand();
+                komut2.Parameters.AddWithValue("@adsoyad", satır.Cells["adsoyad"].Value.ToString());
+                komut2.Parameters.AddWithValue("@tc", satır.Cells["tc"].Value.ToString());
+                komut2.Parameters.AddWithValue("@plaka", satır.Cells["plaka"].Value.ToString());
+                komut2.Parameters.AddWithValue("@marka", satır.Cells["marka"].Value.ToString());
+                komut2.Parameters.AddWithValue("@seri", satır.Cells["seri"].Value.ToString());
+                komut2.Parameters.AddWithValue("@model", satır.Cells["model"].Value.ToString());
+                komut2.Parameters.AddWithValue("@renk", satır.Cells["renk"].Value.ToString());
+                komut2.Parameters.AddWithValue("@gun", _gun);
+                komut2.Parameters.AddWithValue("@tutar", toplamtutar);
+                komut2.Parameters.AddWithValue("@tarih_1", satır.Cells["c_tarih"].Value.ToString());
+                komut2.Parameters.AddWithValue("@tarih_2", DateTime.Now.ToShortDateString());
+                komut2.Parameters.AddWithValue("@fiyat", ucret);
+                arac.ekle_sil_güncelle(komut2, sorgu3);
+
+                MessageBox.Show("Araç teslim edildi");
+                comboAraçlar.Text = "";
+                comboAraçlar.Items.Clear();
+                Boş_Araçlar();
+                Yenile();
+
+                foreach (Control item in groupBox1.Controls)
+                    if (item is TextBox)
+                        item.Text = "";
+
+                foreach (Control item in groupBox2.Controls)
+                    if (item is TextBox)
+                        item.Text = "";
+                comboAraçlar.Text = "";
+
+                Temizle();
+
+                txtEkstra.Text = "";
+            }
+            else 
+            {
+                MessageBox.Show("Lütfen seçim yapınız", "Uyarı");
+            }
+        }
         private void button11_Click(object sender, EventArgs e)
         {
             Araçlistele arclstl = new Araçlistele();
@@ -204,8 +302,6 @@ namespace Projem
             this.Hide();
         }
 
-     
-
-        
+       
     }
 }
